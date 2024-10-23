@@ -4,7 +4,7 @@ import PokemonCard from "./componants/PokemonCard";
 function App() {
   return (
     <>
-      <PokemonCard />
+      <PokemonCard pokemon={pokemonList[0]} />
     </>
   );
 }
