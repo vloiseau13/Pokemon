@@ -4,27 +4,27 @@ import PokemonCard from "./componants/PokemonCard";
 
 const pokemonList = [
   {
-    name: "bulbasaur",
+    name: "Bulbizarre",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
-    name: "charmander",
+    name: "Salamèche",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
   },
   {
-    name: "squirtle",
+    name: "Carapuce",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
   },
   {
-    name: "pikachu",
+    name: "Pikachu",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
   },
   {
-    name: "mew",
+    name: "Mew",
   },
 ];
 
@@ -39,7 +39,10 @@ function App() {
 
   return (
     <div>
-      <PokemonCard name={pokemonList[0].name} imgSrc={pokemonList[0].imgSrc} />
+      <PokemonCard
+        name={pokemonList[pokemonIndex].name}
+        imgSrc={pokemonList[pokemonIndex].imgSrc}
+      />
       {pokemonIndex > 0 ? (
         <button type="button" onClick={clickMoins}>
           Précedent
@@ -47,7 +50,7 @@ function App() {
       ) : (
         ""
       )}
-      {pokemonIndex < pokemonList.length ? (
+      {pokemonIndex < pokemonList.length - 1 ? (
         <button type="button" onClick={clickPlus}>
           Suivant
         </button>
