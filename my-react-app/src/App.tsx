@@ -32,19 +32,10 @@ const pokemonList = [
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const clickPlus = () => {
-    setPokemonIndex(pokemonIndex + 1);
-  };
-  const clickMoins = () => {
-    setPokemonIndex(pokemonIndex - 1);
-  };
-
   return (
     <div>
       <NavBar
         pokemonIndex={pokemonIndex}
-        clickPlus={clickPlus}
-        clickMoins={clickMoins}
         pokemonList={pokemonList}
         setPokemonIndex={setPokemonIndex}
       />
